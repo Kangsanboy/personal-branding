@@ -1,4 +1,9 @@
 export const PORTFOLIO_DATA = {
+  profile: {
+    name: "[NAMA ABANG]",
+    role: "Digital Solution Architect & Web Developer",
+    bio: "Saya berspesialisasi dalam menjembatani kebutuhan bisnis klien dengan teknologi modern. Fokus saya adalah merancang dan membangun solusi digital yang fungsional—mulai dari sistem manajemen institusi pendidikan, dasbor operasional B2B, hingga platform komunitas interaktif—menjadi aplikasi yang efisien dan siap pakai.",
+  },
   projects: [
     {
       id: 1,
@@ -24,5 +29,11 @@ export const PORTFOLIO_DATA = {
       image: "/genztalk.png",
       link: "#"
     }
-  ]
+  ],
+  contact: {
+    email: "mailto:emailabang@gmail.com",
+    github: "https://github.com/username-abang",
+    instagram: "https://instagram.com/username-abang",
+    whatsapp: "https://wa.me/6281234567890" // Ganti dengan nomor WA Abang
+  }
 };
