@@ -1,6 +1,6 @@
 export const PORTFOLIO_DATA = {
   profile: {
-    name: "[NAMA ABANG]",
+    name: "RAJIB ALWI",
     role: "Digital Solution Architect & Web Developer",
     bio: "Saya berspesialisasi dalam menjembatani kebutuhan bisnis klien dengan teknologi modern. Fokus saya adalah merancang dan membangun solusi digital yang fungsional—mulai dari sistem manajemen institusi pendidikan, dasbor operasional B2B, hingga platform komunitas interaktif—menjadi aplikasi yang efisien dan siap pakai.",
   },
@@ -31,9 +31,11 @@ export const PORTFOLIO_DATA = {
     }
   ],
   contact: {
-    email: "mailto:emailabang@gmail.com",
+    email: "mailto:filerajib2002@gmail.com",
     github: "https://github.com/username-abang",
     instagram: "https://instagram.com/username-abang",
-    whatsapp: "https://wa.me/6281234567890" // Ganti dengan nomor WA Abang
+    whatsapp: "https://wa.me/6285353666197", // Ganti nomor WA Abang
+    linkedin: "https://linkedin.com/in/username-abang", // Link LinkedIn Abang
+    facebook: "https://facebook.com/rajib.alwi.94" // Link Facebook Abang
   }
 };
