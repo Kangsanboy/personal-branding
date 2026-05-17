@@ -60,14 +60,22 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         {/* Galeri Screenshot */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-white mb-6">Tampilan Antarmuka</h2>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-10">
             {project.screenshots?.map((src, idx) => (
-              <div key={idx} className="relative w-full h-[300px] md:h-[500px] rounded-xl overflow-hidden bg-slate-900 border border-slate-800 shadow-xl">
+              <div key={idx} className="relative w-full h-[400px] md:h-[700px] rounded-xl overflow-hidden bg-slate-950 border border-slate-800 shadow-2xl flex items-center justify-center group">
+                {/* Latar Belakang Blur Anti-Kopong */}
+                <Image 
+                  src={src} 
+                  alt="bg blur"
+                  fill
+                  className="object-cover opacity-20 blur-3xl scale-110"
+                />
+                {/* Gambar Asli (Aman untuk Potrait maupun Landscape) */}
                 <Image 
                   src={src} 
                   alt={`${project.title} screenshot ${idx + 1}`}
                   fill
-                  className="object-contain"
+                  className="object-contain z-10 p-4 md:p-8 group-hover:scale-[1.02] transition-transform duration-700"
                 />
               </div>
             ))}
