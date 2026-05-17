@@ -1,4 +1,4 @@
-import { PORTFOLIO_DATA } from "../../constants/portfolio";
+import { PORTFOLIO_DATA } from "@/constants/portfolio";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
