@@ -1,41 +1,61 @@
+"use client";
+
 import ProjectCard from "../components/ProjectCard";
 import { PORTFOLIO_DATA } from "../constants/portfolio";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const { profile, projects, contact } = PORTFOLIO_DATA;
 
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-indigo-500/30">
+    <main className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-indigo-500/30 overflow-hidden">
       
       {/* 1. HERO & ABOUT SECTION */}
       <section className="pt-32 pb-20 px-6 max-w-4xl mx-auto text-center">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
+          className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight"
+        >
           Halo, saya <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-500">{profile.name}</span>
-        </h1>
-        <h2 className="text-xl md:text-2xl font-medium text-indigo-400 mb-8">
+        </motion.h1>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
+          className="text-xl md:text-2xl font-medium text-indigo-400 mb-8"
+        >
           {profile.role}
-        </h2>
-        <p className="text-lg text-slate-400 leading-relaxed max-w-3xl mx-auto">
+        </motion.h2>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
+          className="text-lg text-slate-400 leading-relaxed max-w-3xl mx-auto"
+        >
           {profile.bio}
-        </p>
+        </motion.p>
       </section>
 
       {/* 2. PROJECTS SECTION */}
       <section className="py-20 px-6 max-w-6xl mx-auto border-t border-slate-800/50">
-        <div className="mb-16 text-center">
+        <motion.div 
+          initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+          className="mb-16 text-center"
+        >
           <h2 className="text-4xl font-bold text-white mb-4">Karya Terbaik</h2>
           <p className="text-slate-400">Beberapa solusi digital yang telah saya kembangkan.</p>
-        </div>
+        </motion.div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((proyek) => (
-            <ProjectCard key={proyek.id} project={proyek} />
+          {projects.map((proyek, index) => (
+            // Mengirim index agar animasinya bergiliran (stagger)
+            <ProjectCard key={proyek.id} project={proyek} index={index} />
           ))}
         </div>
       </section>
 
       {/* 3. CONTACT SECTION */}
       <section className="py-24 px-6 bg-slate-900/50 border-t border-slate-800/50">
-        <div className="max-w-4xl mx-auto text-center">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+          className="max-w-4xl mx-auto text-center"
+        >
           <p className="text-indigo-400 font-semibold tracking-wider uppercase mb-3 text-sm">Kontak</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Hubungi Saya</h2>
           
@@ -65,7 +85,7 @@ export default function Home() {
               <svg className="w-6 h-6 text-slate-400 group-hover:text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
             </a>
           </div>
-        </div>
+        </motion.div>
       </section>
 
     </main>
