@@ -14,11 +14,27 @@ export const PORTFOLIO_DATA = {
       image: "/simatren.png", 
       aboutText: "Simatren dibangun untuk mengatasi masalah administrasi manual di institusi pesantren. Sistem ini mempermudah pengurus dalam mendata ribuan santri, mencatat kehadiran secara digital, hingga mengelola sirkulasi keuangan pondok secara transparan.",
       screenshots: [
-        "/simatren.png" // Nanti abang bisa tambah gambar lain di sini
+        "/simatren.png" 
       ],
       features: [
         { title: "Absensi QR Code & IoT", desc: "Santri cukup melakukan scan kartu untuk mencatat kehadiran secara realtime." },
         { title: "Manajemen Keuangan", desc: "Pencatatan uang jajan santri dan tabungan santri yang otomatis terdata." }
+      ]
+    },
+    {
+      id: "simatren-apk",
+      title: "SIMATREN MOBILE (APK)",
+      category: "Aplikasi Android",
+      description: "Versi mobile dari ekosistem Simatren dengan antarmuka yang dioptimalkan untuk smartphone pengurus.",
+      tech: ["Capacitor", "Android", "Next.js"],
+      image: "/apksimatren.png",
+      aboutText: "Sebagai pelengkap dari versi web, saya mengembangkan Simatren menjadi aplikasi mobile berbasis Android (APK). Ini memudahkan pengurus dan tenaga pengajar untuk mengakses data pesantren langsung dari genggaman tangan, kapan saja dan di mana saja.",
+      screenshots: [
+        "/apksimatren.png"
+      ],
+      features: [
+        { title: "UI/UX Responsif Mobile", desc: "Navigasi dan tata letak yang disesuaikan secara khusus untuk kenyamanan penggunaan di layar sentuh." },
+        { title: "Aksesibilitas Instan", desc: "Aplikasi dapat diinstal langsung (APK) di perangkat Android untuk akses yang lebih cepat daripada melalui browser." }
       ]
     },
     {
@@ -30,7 +46,7 @@ export const PORTFOLIO_DATA = {
       image: "/paiyat.png",
       aboutText: "Dashboard PA IYAT BROILER dirancang khusus untuk digitalisasi operasional bisnis peternakan dan penjualan ayam skala besar, menghilangkan pencatatan nota kertas yang rawan hilang.",
       screenshots: [
-        "/paiyat.png" // Nanti abang bisa tambah gambar lain di sini
+        "/paiyat.png" 
       ],
       features: [
         { title: "Pelacakan Stok & Penjualan", desc: "Memantau keluar masuknya komoditas ayam dan grafik keuntungan harian." },
@@ -46,11 +62,27 @@ export const PORTFOLIO_DATA = {
       image: "/genztalk.png",
       aboutText: "Genztalk.id adalah wadah diskusi digital bagi para dai muda di Jawa Barat, dikemas dengan visual kekinian agar menarik minat generasi Z.",
       screenshots: [
-        "/genztalk.png" // Nanti abang bisa tambah gambar lain di sini
+        "/genztalk.png" 
       ],
       features: [
         { title: "Desain Dark Neon", desc: "Tampilan estetik dengan skema warna cyberpunk yang disukai generasi muda." },
         { title: "Scroll Animations", desc: "Efek animasi interaktif yang halus saat halaman di-scroll ke bawah." }
+      ]
+    },
+    {
+      id: "web-portofolio",
+      title: "WEB PORTOFOLIO PRIBADI",
+      category: "Web Profile & Case Study",
+      description: "Website portofolio interaktif dengan sistem data dinamis dan routing otomatis untuk case study.",
+      tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+      image: "/fortopolio.png",
+      aboutText: "Website portofolio ini saya rancang dan bangun sendiri menggunakan arsitektur Data-Driven UI. Pendekatan ini memungkinkan saya untuk menambah proyek baru secara instan hanya dengan memperbarui satu file data tunggal, tanpa perlu merombak struktur kode komponen visualnya.",
+      screenshots: [
+        "/fortopolio.png"
+      ],
+      features: [
+        { title: "Arsitektur Data-Driven", desc: "Pemisahan antara komponen visual dan data konten untuk skalabilitas jangka panjang." },
+        { title: "Dynamic Routing & Case Study", desc: "Halaman detail spesifik untuk setiap proyek yang di-generate secara otomatis menggunakan fitur App Router Next.js." }
       ]
     }
   ],
