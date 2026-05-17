@@ -1,26 +1,20 @@
-// constants/portfolio.ts
-
 export const PORTFOLIO_DATA = {
   profile: {
     name: "[NAMA ABANG]",
     role: "Digital Solution Architect & Web Developer",
-    bio: "Saya berspesialisasi dalam menjembatani kebutuhan bisnis klien dengan teknologi modern...",
+    bio: "Saya berspesialisasi dalam menjembatani kebutuhan bisnis klien dengan teknologi modern. Fokus saya adalah merancang dan membangun solusi digital yang fungsional—mulai dari sistem manajemen institusi pendidikan, dasbor operasional B2B, hingga platform komunitas interaktif—menjadi aplikasi yang efisien dan siap pakai.",
   },
   projects: [
     {
-      id: "simatren", // kita ubah id jadi text biar url-nya keren (misal: /projects/simatren)
+      id: "simatren", 
       title: "SIMATREN",
       category: "Sistem Informasi Pesantren",
       description: "Platform manajemen pendidikan terintegrasi untuk pelacakan absensi dan keuangan santri.",
       tech: ["Next.js", "Supabase", "Capacitor"],
       image: "/simatren.png", 
-      
-      // === TAMBAHAN UNTUK HALAMAN DETAIL ===
       aboutText: "Simatren dibangun untuk mengatasi masalah administrasi manual di institusi pesantren. Sistem ini mempermudah pengurus dalam mendata ribuan santri, mencatat kehadiran secara digital, hingga mengelola sirkulasi keuangan pondok secara transparan.",
       screenshots: [
-        "/images/simatren-dashboard.png",
-        "/images/simatren-absensi.png",
-        "/images/simatren-keuangan.png"
+        "/simatren.png" // Nanti abang bisa tambah gambar lain di sini
       ],
       features: [
         { title: "Absensi QR Code & IoT", desc: "Santri cukup melakukan scan kartu untuk mencatat kehadiran secara realtime." },
@@ -35,12 +29,9 @@ export const PORTFOLIO_DATA = {
       description: "Sistem manajemen operasional penjualan ayam dan otomatisasi slip gaji karyawan.",
       tech: ["React", "Tailwind", "TypeScript"],
       image: "/paiyat.png",
-      
-      // === TAMBAHAN UNTUK HALAMAN DETAIL ===
       aboutText: "Dashboard PA IYAT BROILER dirancang khusus untuk digitalisasi operasional bisnis peternakan dan penjualan ayam skala besar, menghilangkan pencatatan nota kertas yang rawan hilang.",
       screenshots: [
-        "/images/paiyat-sales.png",
-        "/images/paiyat-karyawan.png"
+        "/paiyat.png" // Nanti abang bisa tambah gambar lain di sini
       ],
       features: [
         { title: "Pelacakan Stok & Penjualan", desc: "Memantau keluar masuknya komoditas ayam dan grafik keuntungan harian." },
@@ -54,12 +45,9 @@ export const PORTFOLIO_DATA = {
       description: "Website komunitas dai dengan desain modern dark neon dan fitur interaktif.",
       tech: ["Next.js", "Framer Motion"],
       image: "/genztalk.png",
-      
-      // === TAMBAHAN UNTUK HALAMAN DETAIL ===
       aboutText: "Genztalk.id adalah wadah diskusi digital bagi para dai muda di Jawa Barat, dikemas dengan visual kekinian agar menarik minat generasi Z.",
       screenshots: [
-        "/images/genztalk-home.png",
-        "/images/genztalk-forum.png"
+        "/genztalk.png" // Nanti abang bisa tambah gambar lain di sini
       ],
       features: [
         { title: "Desain Dark Neon", desc: "Tampilan estetik dengan skema warna cyberpunk yang disukai generasi muda." },
