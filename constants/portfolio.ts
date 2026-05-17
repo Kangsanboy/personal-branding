@@ -18,8 +18,7 @@ export const PORTFOLIO_DATA = {
       ],
       features: [
         { title: "Absensi QR Code & IoT", desc: "Santri cukup melakukan scan kartu untuk mencatat kehadiran secara realtime." },
-        { title: "Manajemen Keuangan", desc: "Pencatatan uang syahriah (SPP) dan tabungan santri yang otomatis terdata." },
-        { title: "Aplikasi Mobile (APK)", desc: "Dapat diunduh di smartphone pengurus dengan fitur login yang aman." }
+        { title: "Manajemen Keuangan", desc: "Pencatatan uang jajan santri dan tabungan santri yang otomatis terdata." }
       ]
     },
     {
@@ -56,11 +55,11 @@ export const PORTFOLIO_DATA = {
     }
   ],
   contact: {
-    email: "mailto:emailabang@gmail.com",
-    github: "https://github.com/username-abang",
-    instagram: "https://instagram.com/username-abang",
-    whatsapp: "https://wa.me/6281234567890",
-    linkedin: "https://linkedin.com/in/username-abang",
-    facebook: "https://facebook.com/username-abang"
+    email: "mailto:filerajib2002@gmail.com",
+    github: "https://github.com/Kangsanboy",
+    instagram: "https://instagram.com/rajibalwi_26",
+    whatsapp: "https://wa.me/6285353666197",
+    linkedin: "https://linkedin.com/in/rajib alwi",
+    facebook: "https://facebook.com/rajib.alwi.94"
   }
 };
