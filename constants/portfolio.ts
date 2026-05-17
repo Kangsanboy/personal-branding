@@ -1,6 +1,6 @@
 export const PORTFOLIO_DATA = {
   profile: {
-    name: "[NAMA ABANG]",
+    name: "[RAJIB ALWI]",
     role: "Digital Solution Architect & Web Developer",
     bio: "Saya berspesialisasi dalam menjembatani kebutuhan bisnis klien dengan teknologi modern. Fokus saya adalah merancang dan membangun solusi digital yang fungsional—mulai dari sistem manajemen institusi pendidikan, dasbor operasional B2B, hingga platform komunitas interaktif—menjadi aplikasi yang efisien dan siap pakai.",
   },
