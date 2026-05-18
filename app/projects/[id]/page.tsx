@@ -3,18 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-// Tambahkan kata 'async' dan ubah tipe params menjadi Promise
-export default async function ProjectDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  // Buka "bungkus" params-nya menggunakan await (Aturan Next.js 15)
-  const resolvedParams = await params;
-  
-  // Sekarang id-nya pasti terbaca
-  const project = PORTFOLIO_DATA.projects.find((p) => p.id === resolvedParams.id);
+export default function ProjectDetailPage({ params }: { params: { id: string } }) {
+  const project = PORTFOLIO_DATA.projects.find((p) => p.id === params.id);
 
   if (!project) {
     notFound();
   }
-  
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-300 py-20 px-6">
       <div className="max-w-4xl mx-auto">
