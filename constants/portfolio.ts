@@ -75,10 +75,10 @@ export const PORTFOLIO_DATA = {
       category: "Web Profile & Case Study",
       description: "Website portofolio interaktif dengan sistem data dinamis dan routing otomatis untuk case study.",
       tech: ["Next.js", "Tailwind CSS", "TypeScript"],
-      image: "/fortopolio.png",
+      image: "/portofolio.png",
       aboutText: "Website portofolio ini saya rancang dan bangun sendiri menggunakan arsitektur Data-Driven UI. Pendekatan ini memungkinkan saya untuk menambah proyek baru secara instan hanya dengan memperbarui satu file data tunggal, tanpa perlu merombak struktur kode komponen visualnya.",
       screenshots: [
-        "/fortopolio.png"
+        "/portofolio.png"
       ],
       features: [
         { title: "Arsitektur Data-Driven", desc: "Pemisahan antara komponen visual dan data konten untuk skalabilitas jangka panjang." },
