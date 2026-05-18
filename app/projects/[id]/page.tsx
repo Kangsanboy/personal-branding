@@ -3,8 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-export default function ProjectDetailPage({ params }: { params: { id: string } }) {
-  const project = PORTFOLIO_DATA.projects.find((p) => p.id === params.id);
+// 1. Tambahkan async dan Promise di sini
+export default async function ProjectDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  // 2. Buka "bungkusan" params-nya pakai await
+  const resolvedParams = await params;
+  
+  // 3. Cari data berdasarkan ID yang sudah dibuka
+  const project = PORTFOLIO_DATA.projects.find((p) => p.id === resolvedParams.id);
 
   if (!project) {
     notFound();
