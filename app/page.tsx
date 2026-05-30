@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image"; // Tambahan import Image untuk foto
 import ProjectCard from "../components/ProjectCard";
 import { PORTFOLIO_DATA } from "../constants/portfolio";
 import { motion } from "framer-motion";
@@ -11,21 +12,42 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-indigo-500/30 overflow-hidden">
       
       {/* 1. HERO & ABOUT SECTION */}
-      <section className="pt-32 pb-20 px-6 max-w-4xl mx-auto text-center">
+      <section className="pt-32 pb-20 px-6 max-w-4xl mx-auto text-center flex flex-col items-center">
+        
+        {/* FOTO PROFIL DENGAN EFEK FADE BAWAH */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8, y: 20 }} 
+          animate={{ opacity: 1, scale: 1, y: 0 }} 
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="relative w-48 h-56 md:w-56 md:h-64 mb-10 overflow-hidden"
+        >
+          {/* Gambar Asli Abang (object-top biar fokus ke wajah/kepala) */}
+          <Image 
+            src="/rajib.png" 
+            alt="Foto Profil Rajib Alwi" 
+            fill
+            className="object-cover object-top rounded-t-3xl" 
+          />
+          {/* Trik Ilusi Optik: Gradien pudar dari warna background ke transparan */}
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent z-10" />
+        </motion.div>
+
         <motion.h1 
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
           className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight"
         >
           Halo, saya <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-500">{profile.name}</span>
         </motion.h1>
+        
         <motion.h2 
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
           className="text-xl md:text-2xl font-medium text-indigo-400 mb-8"
         >
           {profile.role}
         </motion.h2>
+        
         <motion.p 
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.6 }}
           className="text-lg text-slate-400 leading-relaxed max-w-3xl mx-auto"
         >
           {profile.bio}
@@ -44,7 +66,6 @@ export default function Home() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((proyek, index) => (
-            // Mengirim index agar animasinya bergiliran (stagger)
             <ProjectCard key={proyek.id} project={proyek} index={index} />
           ))}
         </div>
